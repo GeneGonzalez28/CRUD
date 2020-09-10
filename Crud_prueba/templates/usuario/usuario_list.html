@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Nombre</td>
+            <td>Apellido</td>
+            <td>Cedula</td>
+            <td>Direccion</td>
+            <td>Acciones</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        
+        {% for usuario in usuarios %}
+        <tr>
+            <td>{{usuario.nombre}}</td>
+            <td>{{usuario.apellido}}</td>
+            <td>{{usuario.cedula}}</td>
+            <td>{{usuario.direccion}}</td>
+            <td>
+                <a class="btn btn-primary" href="{% url 'editarusuario' usuario.id %}" >Editar</a>
+                <a class="btn btn-danger" href="{% url 'eliminarusuario' usuario.id %}" >Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
