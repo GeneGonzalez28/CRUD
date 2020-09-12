@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<div class="container-md">
     <form method="post">
         {% csrf_token %}
         {{Formulario.as_p}}
         <input type="submit" value="Enviar Formulario de Ciudad">
     </form>
-
+</div>
 {% endblock %}

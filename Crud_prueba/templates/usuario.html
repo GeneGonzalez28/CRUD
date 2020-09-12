@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="container">
     <form method="POST">
         {% csrf_token %}
         {{usuarioForm.as_p}}
         <input type="submit" value="Enviar">
 
     </form>
-
+</div>
 {% endblock %}

@@ -1,3 +1,8 @@
-body { background-color: #FFF; color: #4762B0; }
-h1, h2, h3, h4, h5, h6 { color: #C00; }
+body{
+    display: flex;
 
+}
+form {
+    margin-top: 40px;
+}
+ 

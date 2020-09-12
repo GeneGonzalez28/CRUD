@@ -86,7 +86,7 @@ def pais(request):
         if paisForm.is_valid():
             instancia = paisForm.save(commit=False)
             instancia.save()
-            return redirect("crearusuario")
+            return redirect("crearusuario ")
     else:
         paisForm = PaisForm()
     return render(request, "pais.html", {"Formulario": paisForm})

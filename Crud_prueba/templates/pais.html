@@ -2,11 +2,12 @@
 
 {% block content %}
 
-
+<div class="container-md">
     <form method="post">
         {% csrf_token %}
         {{Formulario.as_p}}
         <input type="submit" value="Enviar Formulario de Pais">
     </form>
 
-{% endblock %}
+    {% endblock %}
+</div>
